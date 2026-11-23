@@ -63,48 +63,56 @@ CREATE TABLE hibernate_sequence (
 INSERT INTO usuario
 (id_usuario, nombre, correo_electronico, contrasena, rol, imagen_usuario)
 VALUES
-    (131, 'Usuario Ejemplo Uno', 'usuario1@ejemplo.com', 'Ejemplo123!', 'Estudiante', '#70FAB7'),
-    (172, 'Usuario Ejemplo Dos', 'usuario2@ejemplo.com', 'Ejemplo123!', 'Estudiante', '#54EA01'),
-    (196, 'Usuario Ejemplo Tres', 'usuario3@ejemplo.com', 'Ejemplo123!', 'Estudiante', '#805611');
+(131, 'Usuario Ejemplo Uno', 'usuario1@ejemplo.com', 'Ejemplo123!', 'Estudiante', '#70FAB7'),
+(172, 'Usuario Ejemplo Dos', 'usuario2@ejemplo.com', 'Ejemplo123!', 'Estudiante', '#54EA01'),
+(196, 'Usuario Ejemplo Tres', 'usuario3@ejemplo.com', 'Ejemplo123!', 'Estudiante', '#805611');
 
 
 INSERT INTO proyectos
 (id_proyecto, nombre, descripcion, fecha_inicio, fecha_finalizacion, estado_proyecto, fondo)
 VALUES
-(197,
- 'My API Rest',
- 'Desarrollaran un Api Rest, que satisfaga un sistema de información con al menos 5 tablas.',
- '2024-05-31',
- '2024-06-29',
- 'En proceso',
- '/Images/animacion1.gif');
+(
+    197,
+    'My API Rest',
+    'Desarrollaran un Api Rest, que satisfaga un sistema de información con al menos 5 tablas.',
+    '2024-05-31',
+    '2024-06-29',
+    'En proceso',
+    '/Images/animacion1.gif'
+);
 
 
 INSERT INTO tareas
 (id_tarea, nombre, descripcion, fecha_vencimiento, estado, lista, id_proyecto)
 VALUES
-(199,
- 'Base de datos',
- 'Realizar la estructura de las tablas',
- '2024-06-13',
- 'danger',
- 'terminado',
- 197);
+(
+    199,
+    'Base de datos',
+    'Realizar la estructura de las tablas',
+    '2024-06-13',
+    'danger',
+    'terminado',
+    197
+);
 
 
 INSERT INTO comentarios
 (id_comentario, texto_comentario, fecha_hora, id_usuario, id_tarea)
 VALUES
-(201,
- 'Subirlo YA!!!',
- '2024-06-26 13:48:00',
- 'Usuario Ejemplo Tres',
- 199),
-(202,
- 'hola',
- '2024-06-26 13:49:00',
- 'Usuario Ejemplo Dos',
- 199);
+(
+    201,
+    'Subirlo YA!!!',
+    '2024-06-26 13:48:00',
+    'Usuario Ejemplo Tres',
+    199
+),
+(
+    202,
+    'hola',
+    '2024-06-26 13:49:00',
+    'Usuario Ejemplo Dos',
+    199
+);
 
 
 INSERT INTO hibernate_sequence
