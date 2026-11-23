@@ -150,4 +150,3 @@ SELECT setval(
     20,
     true
 );
-SELECT  id_usuario,nombre   FROM usuario;
