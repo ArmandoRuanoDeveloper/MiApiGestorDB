@@ -115,7 +115,6 @@ VALUES
 );
 
 
-
 SELECT setval(
     pg_get_serial_sequence('usuario', 'id_usuario'),
     196,
