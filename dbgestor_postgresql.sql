@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS comentarios CASCADE;
 DROP TABLE IF EXISTS tareas CASCADE;
 DROP TABLE IF EXISTS proyectos CASCADE;
 DROP TABLE IF EXISTS usuario CASCADE;
-DROP TABLE IF EXISTS hibernate_sequence CASCADE;
+DROP SEQUENCE IF EXISTS hibernate_sequence CASCADE;
 
 
 CREATE TABLE usuario (
@@ -55,9 +55,9 @@ CREATE TABLE asignaciones (
 );
 
 
-CREATE TABLE hibernate_sequence (
-    next_val BIGINT
-);
+CREATE SEQUENCE hibernate_sequence
+START WITH 203
+INCREMENT BY 1;
 
 
 INSERT INTO usuario
@@ -114,11 +114,6 @@ VALUES
     199
 );
 
-
-INSERT INTO hibernate_sequence
-(next_val)
-VALUES
-(203);
 
 
 SELECT setval(
